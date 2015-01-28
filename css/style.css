@@ -32,9 +32,7 @@ body
 
 #content li.first 
 {
-	background: url(../img/bg_1.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+
 }
 
 #content li.middle {
@@ -103,3 +101,16 @@ body
 	.nav li:last-child {
 	  border: 0;
 	}
+
+.home
+{
+	background: url(../img/bg_1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.contact
+{
+	background: url(../img/bg_6.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
