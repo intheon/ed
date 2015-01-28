@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Ed Hall</title>
+  <meta charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="header">
+  	<div class="row">Ed Hall</div>
+  	<div class="row">Audio Engineer</div>
+  	<div class="row">Northwest England</div>
+  </div>
+
+  <ul class="nav">
+	<li data-page="1" class="active">Home</li>
+	<li data-page="2">Recording</li>
+	<li data-page="3">Mixing</li>
+	<li data-page="4">Mastering</li>
+	<li data-page="5">History</li>
+	<li data-page="6">Contact</li>
+	<li data-page="7">Testaments</li>
+	<li data-page="8">GuitarTuition</li>
+  </ul>
+
+  <!--<div class="button prev deactivated"></div>-->
+  <div id="content">
+	<ul>
+	  <li class="first dragend-page">Home</li>
+	  <li class="dragend-page">Recording</li>
+	  <li class="dragend-page">Mixing</li>
+	  <li class="middle dragend-page">Mastering</li>
+	  <li class="dragend-page">History</li>
+	  <li class="dragend-page">Contact</li>
+	  <li class="dragend-page">Testaments</li>
+	  <li class="last dragend-page">Guitar Tuition</li>
+	</ul>
+  </div>
+  <!--<div class="button next"></div>-->
+
+
+
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/dragend.js"></script>
+
+  <script>
+
+	$(function() {
+	  $("#content").dragend({
+		afterInitialize: function() {
+		  this.container.style.visibility = "visible";
+		},
+		onSwipeEnd: function() {
+		  var first = this.pages[0],
+			  last = this.pages[this.pages.length - 1];
+
+		  $(".prev, .next").removeClass("deactivated");
+		  $(".nav li").removeClass("active");
+
+		  if (first === this.activeElement) {
+			$(".prev").addClass("deactivated")
+		  };
+
+		  if (last === this.activeElement) {
+			$(".next").addClass("deactivated")
+		  }
+
+		  $(".nav li").eq(this.page).addClass("active");
+
+		}
+	  });
+
+	  $(".prev").click(function() {
+		$("#content").dragend("right");
+	  });
+
+	  $(".next").click(function() {
+		$("#content").dragend("left");
+	  });
+
+	  $(".nav").click(function() {
+		var page = $(event.target).data("page");
+
+		$("#content").dragend({
+		  scrollToPage: page
+		});
+
+		$(event.target).addClass("active");
+
+	  })
+
+	});
+
+  </script>
+
+</body>
+</html>
