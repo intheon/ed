@@ -1,12 +1,11 @@
-
-	$(function() {
-	  $("#content").dragend({
-		afterInitialize: function() {
-		  this.container.style.visibility = "visible";
-		},
-		onSwipeEnd: function() {
-		  var first = this.pages[0],
-			  last = this.pages[this.pages.length - 1];
+$("#content").dragend({
+	afterInitialize: function() 
+	{
+		this.container.style.visibility = "visible";
+	}, onSwipeEnd: function() 
+	{
+		var first = this.pages[0],
+			last = this.pages[this.pages.length - 1];
 
 		  $(".prev, .next").removeClass("deactivated");
 		  $(".nav li").removeClass("active");
@@ -21,27 +20,31 @@
 
 		  $(".nav li").eq(this.page).addClass("active");
 
-		}
-	  });
+	}
+});
 
-	  $(".prev").click(function() {
-		$("#content").dragend("right");
-	  });
+$(window).bind('mousewheel DOMMouseScroll', function(event)
+{
+    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) 
+    {
+        $("#content").dragend("right");
+    }
+    else 
+    {
 
-	  $(".next").click(function() {
-		$("#content").dragend("left");
-	  });
+        $("#content").dragend("left");
+    }
+});
 
-	  $(".nav").click(function() {
-		var page = $(event.target).data("page");
+$(".nav").click(function() {
+var page = $(event.target).data("page");
 
-		$("#content").dragend({
-		  scrollToPage: page
-		});
+$("#content").dragend({
+	scrollToPage: page
+});
 
-		$(event.target).addClass("active");
+$(event.target).addClass("active");
 
 	  })
 
-	});
 
