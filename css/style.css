@@ -108,9 +108,16 @@ body
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+.home .sub_content_widget iframe
+{
+	float:left;
+}
 .contact
 {
 	background: url(../img/bg_6.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+
