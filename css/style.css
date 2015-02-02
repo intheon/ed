@@ -137,23 +137,45 @@ body
 .intro
 {
 	float:				left;
-	width:				9%;
-	margin-top:			9%;
-	margin-left:		4.9%;
+	width:				auto;
+	margin-top:			11%;
+	margin-left:		5.9%;
 	color:				white;
 	font-size:			1.4em;
 	margin-bottom:		9%;
 }
 .intro .row
 {
-	padding-bottom:		1.5%;
-	margin-bottom: 		6%
+	padding-bottom:		0.5%;
+	margin-bottom: 		1.5%
+}
+.sub
+{
+	font-size: 			0.8em;
+}
+.title
+{
+	font-size: 			1.56em;
+	border-bottom:		1px solid;
+	border-color: 		#464545;
 }
 .module_wrapper
 {
 	float:				right;
-	width:				40%;
-	padding:			4%;
+	width:				18%;
+	height:				100%;
+	background: 		url(../img/area_bg.png);
+	background-size: 	cover;
+}
+.module_header_image
+{
+	padding-top: 		4.5%;
+	padding-bottom: 		1.5%;
+	text-align: 		center;
+}
+.sub_content_widget iframe
+{
+	padding-bottom:		3%;
 }
 .module
 {
@@ -165,7 +187,7 @@ body
 	padding-right:		22%;
 	padding-bottom:		3%;
 	background-color:	white;
-	opacity:			0.85;
+	opacity:			0.93;
 }
 .text h1
 {
@@ -214,4 +236,18 @@ body
 	width:				32.8%;
 }
 
-
+.embed-container 
+{
+	position: relative; 
+	padding-bottom: 120%; 
+	height: 0;
+	overflow: hidden;
+} 
+.embed-container iframe, .embed-container object, .embed-container embed 
+{ 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
