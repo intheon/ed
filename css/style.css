@@ -44,117 +44,94 @@ body
 
 }
 
-	.button {
-	  height: 0;
-	  width: 0;
-	  position: absolute;
-	  top: 250px;
-	  left: 50%;
-	  cursor: pointer;
-	  border-style: solid;
-	}
-
-	.button.deactivated {
-	  opacity: 0.2;
-	  cursor: default;
-	}
-
-	.prev {
-	  margin-left: -320px;
-	  border-width: 50px 50px 50px 0;
-	  border-color: transparent #333 transparent transparent;
-	}
-
-	.next {
-	  margin-left: 270px;
-	  border-width: 50px 0 50px 50px;
-	  border-color: transparent transparent transparent #333;
-	}
-
 .nav 
 {
 	display: 			flex;
 	list-style: 		none;
+	padding-top:		0.4%;
+	padding-bottom:		0.4%;
 }
 
 .nav li.active 
 {
-	background: 		#ffffff;
+	background: 		#EDEDED;
 	color: 				#2B5B7F;
 }
 .nav li:hover
 {
-	color:				#2B5B7F;
+	color:				#C5C5C5;
 }
 
 .nav li 
 {
-	width: 20%;
-	margin-top:2%;
-	margin-bottom:2%;
-	line-height:22px;
-	text-align: center;
-	border-right: 1px solid #000000;
-	  box-sizing: border-box;
-	  cursor: pointer;
-	}
+	width: 				20%;
+	padding-top:		0.5%;
+	padding-bottom:		0.5%;
+	line-height:		22px;
+	text-align: 		center;
+	border-right: 		1px solid #DFDFDF;
+	box-sizing: 		border-box;
+	cursor: 			pointer;
+	font-size:			1.24em;
+}
 
-	.nav li:last-child {
-	  border: 0;
-	}
+.nav li:last-child 
+{
+	border: 0;
+}
 
 .home
 {
-	background: url(../img/bg_1.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: 		url(../img/bg_1.jpg);
+	background-size: 	cover;
+	background-repeat: 	no-repeat;
 }
 
 .home .sub_content_widget iframe
 {
-	float:left;
+	float:				left;
 }
 .recording
 {
-	background: url(../img/bg_2.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: 		url(../img/bg_2.jpg);
+	background-size: 	cover;
+	background-repeat: 	no-repeat;
 }
 .mixing
 {
-	background: url(../img/bg_3.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: 		url(../img/bg_3.jpg);
+	background-size: 	cover;
+	background-repeat: 	no-repeat;
 }
 .mastering
 {
-	background: url(../img/bg_4.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: 		url(../img/bg_4.jpg);
+	background-size: 	cover;
+	background-repeat: 	no-repeat;
 }
 .history
 {
-	background: url(../img/bg_5.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: 		url(../img/bg_5.jpg);
+	background-size: 	cover;
+	background-repeat: 	no-repeat;
 }
 .contact
 {
-	background: url(../img/bg_6.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: 		url(../img/bg_6.jpg);
+	background-size: 	cover;
+	background-repeat: 	no-repeat;
 }
 .testaments
 {
-	background: url(../img/bg_7.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: 		url(../img/bg_7.jpg);
+	background-size: 	cover;
+	background-repeat: 	no-repeat;
 }
 .guitar
 {
-	background: url(../img/bg_8.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: 		url(../img/bg_8.jpg);
+	background-size: 	cover;
+	background-repeat: 	no-repeat;
 }
 
 .intro
@@ -181,6 +158,60 @@ body
 .module
 {
 	flex-direction:		column;
+}
+.text
+{
+	padding:			2%;
+	padding-right:		22%;
+	padding-bottom:		3%;
+	background-color:	white;
+	opacity:			0.85;
+}
+.text h1
+{
+	padding-top: 		0%;
+	margin-top: 		0%;
+}
+.text p
+{
+	font-size:			1.14em;
+}
+.contact_form
+{
+
+}
+#email_contact_form input, textarea
+{
+	color:				#3A3131;
+	box-shadow: 		inset 0 0 11px 1px #E9E9E9;
+	font-size:			1.4em;
+	padding:			1.5%;
+	margin-bottom:		1.5%;
+}
+#email_contact_form input:focus
+{
+	outline:			none;
+    box-shadow: 0 0 10px #719ECE;
+}
+#email_contact_form input[type="text"]
+{
+	border-radius:		3px;
+	border:				1px solid;
+	border-color:		#B9B9B9;
+}
+
+#email_message_field
+{
+	width:32.65%;
+	border-radius:		3px;
+	border:				1px solid;
+	border-color:		#B9B9B9;
+	font-size:			1.4em;
+}
+#email_contact_form input[type="button"]
+{
+	margin-top:			1.5%;
+	width:				32.8%;
 }
 
 
