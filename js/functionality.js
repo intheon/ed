@@ -48,5 +48,7 @@ $(event.target).addClass("active");
 	  })
 
 
-$(".overflow").on('touchmove', function(e){ e.preventDefault(); });
+$(".overflow").on('touchmove', function(event){ 
+  event.stopPropagation();
+});
 
