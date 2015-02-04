@@ -20,15 +20,15 @@ body
 
 #content 
 {
-	width: 100%;
-	height: 100%;
-	visibility: hidden;
-	position:absolute;
-	margin:  0;
-	cursor: hand;
-	cursor: -moz-grab;
-	cursor: -webkit-grab;
-	cursor: grab;
+	width: 				100%;
+	height: 			100%;
+	visibility: 		hidden;
+	position:			absolute;
+	margin:  			0;
+	cursor: 			hand;
+	cursor:             -moz-grab;
+	cursor:             -webkit-grab;
+	cursor: 			grab;
 }
 
 #content li.first 
@@ -36,30 +36,40 @@ body
 
 }
 
-#content li.middle {
+#content li.middle 
+{
 
 }
 
-#content li.last {
+#content li.last 
+{
 
 }
 
 .nav 
 {
+	display: 			-webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: 			-moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: 			-ms-flexbox;      /* TWEENER - IE 10 */
+  	display: 			-webkit-flex;     /* NEW - Chrome */
 	display: 			flex;
 	list-style: 		none;
 	padding-top:		0.4%;
 	padding-bottom:		0.4%;
 }
 
-.nav li.active 
+.nav li.active span
 {
-	background: 		#EDEDED;
 	color: 				#2B5B7F;
+	padding-bottom:		3px;
+	border-bottom:		1px solid #2B5B7F;
+
 }
-.nav li:hover
+.nav li:hover span
 {
-	color:				#C5C5C5;
+	color:				#2B5B7F;
+	padding-bottom:		3px;
+	border-bottom:		1px solid #2B5B7F;
 }
 
 .nav li 
@@ -79,6 +89,13 @@ body
 {
 	border: 0;
 }
+.nav li:last-child:hover span
+{
+	padding-bottom:		3px;
+	border-bottom:		1px solid #2B5B7F;
+}
+
+
 
 .home
 {
@@ -138,11 +155,10 @@ body
 {
 	float:				left;
 	width:				auto;
-	margin-top:			11%;
-	margin-left:		5.9%;
-	color:				white;
-	font-size:			1.4em;
-	margin-bottom:		9%;
+	margin-top:			6.5%;
+	margin-left:		5%;
+	color:				black;
+	font-size:			1.5em;
 }
 .intro .row
 {
@@ -161,25 +177,28 @@ body
 }
 .module_wrapper
 {
-	float:				right;
-	width:				18%;
-	height:				100%;
+	float:				left;
+	width:				100%;
 	background: 		url(../img/area_bg.png);
 	background-size: 	cover;
+	bottom:0;
 }
+
+
 .module_header_image
 {
 	padding-top: 		4.5%;
-	padding-bottom: 		1.5%;
-	text-align: 		center;
-}
-.sub_content_widget iframe
-{
-	padding-bottom:		3%;
+	padding-bottom: 	1.5%;
+	padding-right:		1.5%;
+	text-align: 		right;
 }
 .module
 {
-	flex-direction:		column;
+	background: 		url(../img/area_bg.png);
+	background-size: 	cover;
+	float:right;
+	width:				37.5%;
+	height:				100%;
 }
 .text
 {
@@ -201,12 +220,12 @@ body
 .left
 {
 	float:				left;
-	margin-right:		50%;
+	margin-right:		62.5%;
 }
 .right
 {
 	float:				right;
-	margin-left:		50%
+	margin-left:		62.5%
 }
 .contact_form
 {
@@ -249,7 +268,7 @@ body
 .embed-container 
 {
 	position: relative; 
-	padding-bottom: 120%; 
+	padding-bottom: 90%; 
 	height: 0;
 	overflow: hidden;
 } 
