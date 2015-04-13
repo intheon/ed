@@ -12,30 +12,33 @@
 <body>
 
 <div class="ui eight item orange menu fixed top">
-	<a class="item active" id="home_link" href="index.html">Home</a>
+	<a class="item" id="home_link" href="index.html">Home</a>
 	<a class="item" id="recording_link" href="recording.html">Recording</a>
 	<a class="item" id="mixing_link" href="mixing.html">Mixing</a>
 	<a class="item" id="mastering_link" href="mastering.html">Mastering</a>
 	<a class="item" id="testaments_link" href="testaments.html">Testaments</a>
-	<a class="item" id="contact_link" href="contact.html">Contact</a>
+	<a class="item active" id="contact_link" href="contact.html">Contact</a>
 	<a class="item" id="guitar_link" href="guitar.html">Guitar Tuition</a>
 </div>
 
-<!-- FIRST PANEL -->
-<div class="home">
-	<div class="sub_content_text intro">
-		<div class="row title">Ed Hall</div>
-		<div class="row sub">Audio Engineer </div>
-		<div class="row sub">Northwest England</div>
-		<div class="row sub a"><a href="cv.pdf">Download Audio CV</a></div>
-	</div>
-	<div class="module">
-		<div class="module_header_image"><img src="img/instagram.png" height="48px"></div>
-		<div class="sub_content_widget">
-		<script src="http://snapwidget.com/js/snapwidget.js"></script>
-		<iframe src="http://snapwidget.com/in/?u=ZWRoYWxsYXVkaW98aW58MTAwfDN8M3x8eWVzfDV8bm9uZXxvblN0YXJ0fHllc3x5ZXM=&ve=040215" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+<div class="contact">
+	<div class="text left">
+		<h1>Contact</h1>
+		<p>Get in contact by entering your message below and I aim to get back to you within 24 hours via email. You can also request a phone conversation. </p>
+		<div class="contact_form">
+			<form id="email_contact_form" id="email_contact_form">
+				<input type="text" placeholder="Your name"  id="email_name_field" /><br />
+				<input type="text" placeholder="Email"  id="email_email_field"/><br />
+				<textarea placeholder="Your message" id="email_message_field" cols="40" rows="5"/></textarea>
+				<input type="button" value="Send" id="submit_email"/>
+			</form>
+		</div>
 	</div>
 </div>
+
+<div class="designed">Designed and built by <a href="http://intheon.xyz" target="_blank">Ben S | intheon.xyz</a></div>
+
+
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/functionality.js"></script>
 <script type="text/javascript" src="js/semantic.js"></script>
