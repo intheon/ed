@@ -180,7 +180,6 @@ body
 
 .module_header_image
 {
-	padding-top: 		1.5%;
 	padding-bottom: 	1.5%;
 	padding-right:		1.5%;
 	text-align: 		right;
@@ -350,7 +349,7 @@ blockquote p {
 }
 
 
-@media screen and (max-width:940px){
+@media screen and (max-width:970px){
 
 	.nav 
 	{
@@ -371,8 +370,7 @@ blockquote p {
 	}
 	.intro
 	{
-		margin-top:			13%;
-		margin-left:		13%;
+		margin-top:			10%;
 	}
 	.nav div
 	{
@@ -403,6 +401,53 @@ blockquote p {
 		width:100%;
 	}
 
+	.partial
+{
+	margin:0;
 }
 
+}
+
+@media screen and (max-width:940px){
+
+
+}
+
+@media screen and (max-width:740px){
+
+	.right_focus
+	{	
+		float:none!important;
+		margin:0.4%!important;
+		width:auto!important;
+		padding-top:1.5%;
+
+	}
+
+	.left_focus
+	{	
+		padding-top:2.5%;
+		float:none!important;
+		width:auto!important;
+		margin:0.4%!important;
+				padding-top:5.5%;
+	}
+	.overflow
+	{
+		height:auto!important;
+	}
+
+	.left
+	{
+		margin:0;
+		padding:1%;
+		padding-top:10.4%;
+	}
+	.right
+	{
+		margin:0;
+		padding:1%;
+		padding-top:10.4%;
+	}
+}
 
