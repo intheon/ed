@@ -72,8 +72,9 @@ body
 {
 	height:				100%;
 	background: 		url(../img/bg_1.jpg) !important;
-	background-size: 	cover;
-	background-repeat: 	no-repeat;
+	background-size: 	cover !important;
+	background-repeat: 	no-repeat !important;
+	background-position: left !important;
 }
 
 .home .sub_content_widget iframe
@@ -141,8 +142,8 @@ body
 	width:				auto;
 	margin-top:			6.5%;
 	color:				black;
-	font-size:			1.5em;
 	margin-left:		0%;
+	font-size:		1.5em;
 }
 .intro .row
 {
@@ -408,12 +409,16 @@ blockquote p {
 
 }
 
-@media screen and (max-width:940px){
+@media screen and (max-width:640px){
 
-
+.intro
+{
+	font-size:1.2em !important;
+}
 }
 
 @media screen and (max-width:740px){
+
 
 	.right_focus
 	{	
@@ -449,17 +454,45 @@ blockquote p {
 		padding:1%;
 		padding-top:10.4%;
 	}
+
 }
+
 
 @media screen and (max-width:599px){
 
 .ui.menu.eight.item .item {
-  width: 100% !important;
+  width: 33% !important;
 }
 
-body div:nth-child(2)
+.test
 {
-	padding-top:66%;
+	padding-top:19%;
+}
+.home
+{
+	background-position: 0px -70px! important;
 }
 
 }
+
+@media (max-width:480px){
+
+.home
+{
+	background-position: 0px -40px! important;
+}
+
+
+}
+
+
+@media (max-width:360px){
+
+.home
+{
+	background-position: 0px 0px! important;
+}
+
+
+}
+
