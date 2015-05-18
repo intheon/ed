@@ -18,7 +18,7 @@ $("#submit_email").click(function(){
 			data 				: 
 			{
 				from   			: from,
-				to 				: "edhallsmtpmailer@gmail.com",
+				to 				: "allobon@gmail.com",
 				email  			: email,
 				msg  			: msg  
 			},
