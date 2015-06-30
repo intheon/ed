@@ -1,54 +1,52 @@
-$("#content").dragend({
-	afterInitialize: function() 
+$("#submit_email").click(function(){
+	if ($("#email_name_field").val() == "" || $("#email_email_field").val() == "" || $("#email_message_field").val() == "")
 	{
-		this.container.style.visibility = "visible";
-	}, onSwipeEnd: function() 
-	{
-		var first = this.pages[0],
-			last = this.pages[this.pages.length - 1];
-
-		  $(".prev, .next").removeClass("deactivated");
-		  $(".nav li").removeClass("active");
-
-		  if (first === this.activeElement) {
-			$(".prev").addClass("deactivated")
-		  };
-
-		  if (last === this.activeElement) {
-			$(".next").addClass("deactivated")
-		  }
-
-		  $(".nav li").eq(this.page).addClass("active");
-
+		$("#email_message_outcome").html("<div class='information_message'>\
+			<h2>Please fill out all fields! X</h2>\
+			</div>");
 	}
-});
+	else
+	{
+		var rootDir		= "http://intheon.xyz/ed/"
+		var from 		= $("#email_name_field").val();
+		var email 		= $("#email_email_field").val();
+		var msg 		= $("#email_message_field").val();
 
-$(window).bind('mousewheel DOMMouseScroll', function(event)
-{
-    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) 
-    {
-        $("#content").dragend("right");
-    }
-    else 
-    {
+		$.ajax({
+			type				: "POST",
+			url                 : rootDir + "php/email.php",
+			data 				: 
+			{
+				from   			: from,
+				to 				: "allobon@gmail.com",
+				email  			: email,
+				msg  			: msg  
+			},
+			success				: function(response)
+			{
+				console.log(response);
+				$("#email_name_field").val() == "";
+				$("#email_email_field").val() == "";
+				$("#email_message_field").val() == "";
 
-        $("#content").dragend("left");
-    }
-});
+				$("#email_message_outcome").html("<div class='information_message'>\
+					<h2>Thank you for your message! X</h2>\
+				</div>");
 
-$(".nav").click(function() {
-var page = $(event.target).data("page");
+					$(".information_message").click(function(){
+						$(this).fadeOut(function(){
+							$(this).hide();
+						});
+					});
 
-$("#content").dragend({
-	scrollToPage: page
-});
+			}
+		});
+	}
 
-$(event.target).addClass("active");
+	$(".information_message").click(function(){
+		$(this).fadeOut(function(){
+			$(this).hide();
+		})
+	});
 
-	  })
-
-
-$(".overflow").on('touchmove', function(event){ 
-  event.stopPropagation();
-});
-
+});	

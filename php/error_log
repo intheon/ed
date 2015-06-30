@@ -1,0 +1,24 @@
+[04-May-2015 21:44:51 Europe/London] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Connection could not be established with host smtp.gmail.com [Connection timed out #110]' in /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php:265
+Stack trace:
+#0 /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /home/intheon/public_html/ed/php/swift/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /home/intheon/public_html/ed/php/email.php(29): Swift_Mailer->send(Object(Swift_Message))
+#4 {main}
+  thrown in /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php on line 265
+[04-May-2015 21:45:49 Europe/London] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Connection could not be established with host smtp.gmail.com [Connection timed out #110]' in /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php:265
+Stack trace:
+#0 /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /home/intheon/public_html/ed/php/swift/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /home/intheon/public_html/ed/php/email.php(29): Swift_Mailer->send(Object(Swift_Message))
+#4 {main}
+  thrown in /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php on line 265
+[04-May-2015 21:46:55 Europe/London] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Connection could not be established with host smtp.gmail.com [Connection timed out #110]' in /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php:265
+Stack trace:
+#0 /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /home/intheon/public_html/ed/php/swift/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /home/intheon/public_html/ed/php/email.php(29): Swift_Mailer->send(Object(Swift_Message))
+#4 {main}
+  thrown in /home/intheon/public_html/ed/php/swift/classes/Swift/Transport/StreamBuffer.php on line 265
